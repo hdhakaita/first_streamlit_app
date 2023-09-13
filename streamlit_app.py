@@ -54,7 +54,7 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-    my_cnx.close()
+    #my_cnx.close()
 except URLError as e:
     streamlit.error()
 
