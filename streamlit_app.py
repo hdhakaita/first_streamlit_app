@@ -22,6 +22,8 @@ streamlit.dataframe(fruits_to_show)
 
 # my_fruit_list = my_fruit_list.set_index('Fruit')
 
+
+
 import requests
 streamlit.header('Acces json data and show ')
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi" )
@@ -49,6 +51,7 @@ my_cur = my_cnx.cursor()
 
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
+my_data_row = my_cur.fetchall()
 #streamlit.text("The fruit load contains:")
 streamlit.header("The fruit load contains:")
 #streamlit.text(my_data_row)
