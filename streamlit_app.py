@@ -45,6 +45,7 @@ streamlit.dataframe(fruityvice_normalized)
 def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
     fruityvice_normalized = padans.json_normalized(fruityvice_response.json())
+    fruityvice_normalized = streamlit.text(fruityvice_response.json())
     return fruityvice_normalized
     
 #new section to display fruityvice api response
